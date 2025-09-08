@@ -21,6 +21,27 @@
                         </div>
 
                         {{-- Listado de tareas --}}
+                        @if($tareas->count())
+                            <ul class="space-y-4">
+                                @foreach($tareas as $tarea)
+                                    <li class="border p-4 rounded-lg bg-gray-100 dark:bg-gray-700">
+                                        <div class="flex justify-between items-center">
+                                            <div>
+                                                <h3 class="text-lg font-semibold">{{ $tarea->titulo }}</h3>
+                                                <p class="text-sm text-gray-600 dark:text-gray-300">{{ $tarea->descripcion }}</p>
+                                            </div>
+                                            <span class="px-3 py-1 rounded-full text-sm font-medium 
+                                                {{ $tarea->completada ? 'bg-green-500 text-white' : 'bg-yellow-500 text-white' }}">
+                                                {{ $tarea->completada ? 'Completada' : 'Pendiente' }}
+                                            </span>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @else
+                            <p class="text-gray-500 dark:text-gray-400">No hay tareas registradas.</p>
+                        @endif
+
                     <!--------------------------------------->
                 </div>
             </div>

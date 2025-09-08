@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class TareaController extends Controller
 {
+    public function vista()
+    {
+        $tareas = Tarea::orderByDesc('created_at')->get();
+        return view('dashboard', compact('tareas'));
+    }
+
+
     // 🔍 Listar todas las tareas
     public function index()
     {
