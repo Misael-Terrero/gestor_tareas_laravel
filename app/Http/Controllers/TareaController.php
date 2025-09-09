@@ -25,6 +25,16 @@ class TareaController extends Controller
         return view('tareas.create');
     }
 
+    // 📝 Mostrar el formulario para editar una tarea existente
+    public function edit($id)
+    {
+        $tarea = Tarea::findOrFail($id);
+        return view('tareas.edit', compact('tarea'));
+    }
+
+
+    //--------------------------------------------------------------
+
     // 📥 Crear una nueva tarea
     public function store(Request $request)
     {
@@ -60,7 +70,8 @@ class TareaController extends Controller
         ]);
 
         $tarea->update($validated);
-        return response()->json($tarea);
+
+        return redirect()->route('dashboard')->with('success', 'Tarea actualizada correctamente.');
     }
 
     // 🗑️ Eliminar una tarea
