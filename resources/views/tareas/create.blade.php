@@ -24,16 +24,15 @@
                         <div>
                             <label for="titulo" class="block text-sm font-semibold text-gray-700 dark:text-gray-200">Título</label>
                             <input type="text" name="titulo" id="titulo" required
-                                   class="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-600 text-lg rounded-md bg-gray-100 dark:bg-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+                                   placeholder="Titulo" class="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
                         </div>
 
                         {{-- Campo Descripción --}}
                         <div>
                             <label for="descripcion" class="block text-sm font-semibold text-gray-700 dark:text-gray-200">Descripción</label>
-                            <textarea name="descripcion" id="descripcion" rows="4"
-                                class="w-full mt-1 px-4 py-2 border text-lg border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500"
-                                    placeholder="Detalles opcionales...">
-                            </textarea>
+                            <textarea name="descripcion" id="descripcion" rows="4" 
+                                class="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500"
+                                placeholder="Detalles opcionales..."></textarea>
                         </div>
 
                         {{-- Botón de envío --}}
