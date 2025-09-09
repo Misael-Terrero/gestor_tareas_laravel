@@ -12,7 +12,7 @@
                     <!--------------------------------------->
                     {{-- Botones de acción --}}
                     <div class="flex justify-between mb-6">
-                        <a href="{{ route('tareas.index') }}"
+                        <a href="{{ route('dashboard') }}"
                             class="bg-blue-600 hover:bg-blue-700 text-lg font-bold py-2 px-4 rounded">
                             Mis tareas
                         </a>
@@ -40,7 +40,7 @@
                                             <br>
                                             <span
                                                 class="px-3 py-1 rounded-full text-sm font-medium 
-                                                    {{ $tarea->completada ? 'bg-green-500 text-white' : 'bg-yellow-500 text-white' }}">
+                                                    {{ $tarea->completada ? 'bg-green-500' : 'bg-yellow-500' }}">
                                                 {{ $tarea->completada ? 'Completada' : 'Pendiente' }}
                                             </span>
                                             <p class="text-sm text-gray-600 dark:text-gray-300">
@@ -50,7 +50,7 @@
                                         <div class="flex items-center space-x-2">
                                             {{-- Botón Editar --}}
                                             <a href="{{ route('tareas.edit', $tarea->id) }}"
-                                                class="px-3 py-1 bg-blue-500 text-white text-sm rounded border border-blue-700 hover:bg-blue-600 transition">
+                                                class="px-3 py-1 bg-blue-500 text-sm rounded border border-blue-700 hover:bg-blue-600 transition">
                                                 Editar
                                             </a>
 
@@ -60,7 +60,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
-                                                    class="px-3 py-1 bg-red-500 text-white text-sm rounded border border-red-700 hover:bg-red-600 transition">
+                                                    class="px-3 py-1 bg-red-500 text-sm rounded border border-red-700 hover:bg-red-600 transition">
                                                     Eliminar
                                                 </button>
                                             </form>
