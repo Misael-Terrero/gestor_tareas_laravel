@@ -69,7 +69,7 @@ class TareaController extends Controller
         $tarea = Tarea::findOrFail($id);
         $tarea->delete();
 
-        return redirect()->route('tareas.index')->with('success', 'Tarea eliminada correctamente.');
+        return redirect()->route('dashboard')->with('success', 'Tarea eliminada correctamente.');
         //return response()->json(['mensaje' => 'Tarea eliminada correctamente']);
     }
 }
