@@ -16,6 +16,12 @@
                                 Mis tareas
                             </a>
                             
+                            @if(session('success'))
+                                <div class="hidden mt-4 p-4 bg-green-600 text-white rounded font-semibold">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
                             <a href="{{ route('tareas.create') }}" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                                 Agregar tarea
                             </a>
@@ -53,6 +59,19 @@
                                                         Eliminar
                                                     </button>
                                                 </form>
+                                                
+                                                <!-- JS -->
+                                                 <script>
+                                                    document.addEventListener('DOMContentLoaded', () => {
+                                                        const mensaje = document.querySelector('[role="alert"]') || document.querySelector('.bg-green-600');
+                                                        if (mensaje) {
+                                                            mensaje.classList.remove('hidden');
+                                                            setTimeout(() => {
+                                                                mensaje.classList.add('opacity-0');
+                                                            }, 3000);
+                                                        }
+                                                    });
+                                                </script>                                               
                                             </div>
                                         </div>
                                     </li>

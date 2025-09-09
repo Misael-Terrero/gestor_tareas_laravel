@@ -13,7 +13,6 @@ class TareaController extends Controller
         return view('dashboard', compact('tareas'));
     }
 
-
     // 🔍 Listar todas las tareas
     public function index()
     {
@@ -34,27 +33,12 @@ class TareaController extends Controller
             'descripcion' => 'nullable|string',
         ]);
 
-        $tarea = Tarea::create($request->all());
+        Tarea::create($request->all());
 
-        if ($request->ajax()) {
-            return response()->json([
-                'success' => true,
-                'message' => 'Tarea creada correctamente.',
-                'tarea' => $tarea
-            ]);
-        }
-
-        return redirect()->route('tareas.index')->with('success', 'Tarea creada correctamente.');
-        
-        // ---------- ejempos de como se hacia antes-----------
-        /*$validated = $request->validate([
-            'titulo' => 'required|string|max:255',
-            'descripcion' => 'nullable|string',
-            'completada' => 'boolean',
+        return response()->json([
+            'success' => true,
+            'message' => 'Tarea creada correctamente.'
         ]);
-
-        $tarea = Tarea::create($validated);
-        return response()->json($tarea, 201);*/
     }
 
     // 🔎 Mostrar una tarea específica
@@ -85,6 +69,7 @@ class TareaController extends Controller
         $tarea = Tarea::findOrFail($id);
         $tarea->delete();
 
-        return response()->json(['mensaje' => 'Tarea eliminada correctamente']);
+        return redirect()->route('tareas.index')->with('success', 'Tarea eliminada correctamente.');
+        //return response()->json(['mensaje' => 'Tarea eliminada correctamente']);
     }
 }
