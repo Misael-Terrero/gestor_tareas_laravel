@@ -20,6 +20,12 @@ class TareaController extends Controller
         return response()->json(Tarea::orderByDesc('created_at')->get());
     }
 
+    // 📝 Mostrar el formulario para crear una nueva tarea
+    public function create()
+    {
+        return view('tareas.create');
+    }
+
     // 📥 Crear una nueva tarea
     public function store(Request $request)
     {
