@@ -28,12 +28,31 @@
                                         <div class="flex justify-between items-center">
                                             <div>
                                                 <h3 class="text-lg font-semibold">{{ $tarea->titulo }}</h3>
+                                                <br>
+                                                <span class="px-3 py-1 rounded-full text-sm font-medium 
+                                                    {{ $tarea->completada ? 'bg-green-500 text-white' : 'bg-yellow-500 text-white' }}">
+                                                    {{ $tarea->completada ? 'Completada' : 'Pendiente' }}
+                                                </span>
                                                 <p class="text-sm text-gray-600 dark:text-gray-300">{{ $tarea->descripcion }}</p>
                                             </div>
-                                            <span class="px-3 py-1 rounded-full text-sm font-medium 
-                                                {{ $tarea->completada ? 'bg-green-500 text-white' : 'bg-yellow-500 text-white' }}">
-                                                {{ $tarea->completada ? 'Completada' : 'Pendiente' }}
-                                            </span>
+                                            
+                                            <div class="flex items-center space-x-2">
+                                                {{-- Botón Editar --}}
+                                                <a href="{{ route('tareas.edit', $tarea->id) }}"
+                                                class="px-3 py-1 bg-blue-500 text-white text-sm rounded border border-blue-700 hover:bg-blue-600 transition">
+                                                    Editar
+                                                </a>
+
+                                                {{-- Botón Eliminar --}}
+                                                <form action="{{ route('tareas.destroy', $tarea->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro de eliminar esta tarea?');">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit"
+                                                            class="px-3 py-1 bg-red-500 text-white text-sm rounded border border-red-700 hover:bg-red-600 transition">
+                                                        Eliminar
+                                                    </button>
+                                                </form>
+                                            </div>
                                         </div>
                                     </li>
                                 @endforeach
