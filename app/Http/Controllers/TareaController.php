@@ -29,14 +29,32 @@ class TareaController extends Controller
     // 📥 Crear una nueva tarea
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
+            'titulo' => 'required|string|max:255',
+            'descripcion' => 'nullable|string',
+        ]);
+
+        $tarea = Tarea::create($request->all());
+
+        if ($request->ajax()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Tarea creada correctamente.',
+                'tarea' => $tarea
+            ]);
+        }
+
+        return redirect()->route('tareas.index')->with('success', 'Tarea creada correctamente.');
+        
+        // ---------- ejempos de como se hacia antes-----------
+        /*$validated = $request->validate([
             'titulo' => 'required|string|max:255',
             'descripcion' => 'nullable|string',
             'completada' => 'boolean',
         ]);
 
         $tarea = Tarea::create($validated);
-        return response()->json($tarea, 201);
+        return response()->json($tarea, 201);*/
     }
 
     // 🔎 Mostrar una tarea específica

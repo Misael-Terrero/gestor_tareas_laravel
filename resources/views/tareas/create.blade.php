@@ -5,6 +5,8 @@
         </h2>
     </x-slot>
 
+    <div id="mensaje" class="hidden mt-4 p-4 rounded text-white font-semibold"></div>
+
     <div class="py-12">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -47,6 +49,41 @@
                             </button>
                         </div>
                     </form>
+
+                    <div id="mensaje" class="hidden mt-4 p-4 rounded text-white font-semibold"></div>
+
+                    <script>
+                        document.querySelector('form').addEventListener('submit', async function(e) {
+                            e.preventDefault();
+
+                            const form = e.target;
+                            const data = new FormData(form);
+
+                            const response = await fetch(form.action, {
+                                method: 'POST',
+                                headers: {
+                                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                                    'X-Requested-With': 'XMLHttpRequest',
+                                    'Accept': 'application/json'
+                                },
+                                body: data
+                            });
+
+                            const result = await response.json();
+
+                            const mensajeDiv = document.getElementById('mensaje');
+                            if (result.success) {
+                                mensajeDiv.textContent = result.message;
+                                mensajeDiv.className = 'mt-4 p-4 rounded bg-green-600 text-white font-semibold';
+                                mensajeDiv.classList.remove('hidden');
+                                form.reset();
+                            } else {
+                                mensajeDiv.textContent = 'Ocurrió un error.';
+                                mensajeDiv.className = 'mt-4 p-4 rounded bg-red-600 text-white font-semibold';
+                                mensajeDiv.classList.remove('hidden');
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>

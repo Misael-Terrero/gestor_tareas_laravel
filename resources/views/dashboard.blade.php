@@ -61,7 +61,6 @@
                         @else
                             <p class="text-gray-500 dark:text-gray-400">No hay tareas registradas.</p>
                         @endif
-
                     <!--------------------------------------->
                 </div>
             </div>
