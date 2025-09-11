@@ -15,13 +15,13 @@
                     <div class="mb-4">
                         <label for="titulo" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{ __("Title") }}</label>
                         <input type="text" name="titulo" id="titulo" value="{{ old('titulo', $tarea->titulo) }}"
-                               class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                               class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
                     </div>
 
                     <div class="mb-4">
                         <label for="descripcion" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{ __("Description") }}</label>
                         <textarea name="descripcion" id="descripcion"
-                                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:ring-blue-500 focus:border-blue-500">{{ old('descripcion', $tarea->descripcion) }}</textarea>
+                                  class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">{{ old('descripcion', $tarea->descripcion) }}</textarea>
                     </div>
 
                     <div class="mb-4">
