@@ -13,13 +13,11 @@ class TareaController extends Controller
         return view('dashboard', compact('tareas'));
     }
 
-
     // 🔍 Listar todas las tareas
     public function index()
     {
         return response()->json(auth()->user()->tareas()->orderByDesc('created_at')->get());
     }
-
 
     // 📝 Mostrar el formulario para crear una nueva tarea
     public function create()
@@ -27,16 +25,12 @@ class TareaController extends Controller
         return view('tareas.create');
     }
 
-
-
     // 📝 Mostrar el formulario para editar una tarea existente
     public function edit($id)
     {
         $tarea = auth()->user()->tareas()->findOrFail($id);
         return view('tareas.edit', compact('tarea'));
     }
-
-
 
     //--------------------------------------------------------------
 
@@ -60,14 +54,12 @@ class TareaController extends Controller
         ]);
     }
 
-
     // 🔎 Mostrar una tarea específica
     public function show($id)
     {
         $tarea = auth()->user()->tareas()->findOrFail($id);
         return response()->json($tarea);
     }
-
 
     // ✏️ Actualizar una tarea
     public function update(Request $request, $id)
@@ -84,7 +76,6 @@ class TareaController extends Controller
 
         return redirect()->route('dashboard')->with('success', 'Tarea actualizada correctamente.');
     }
-
 
     // 🗑️ Eliminar una tarea
     public function destroy($id)
