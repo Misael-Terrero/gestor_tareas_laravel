@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Agregar nueva tarea') }}
+            {{ __('Add new task') }}
         </h2>
     </x-slot>
 
@@ -12,7 +12,7 @@
                     {{-- Botón volver --}}
                     <div class="mb-6">
                         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                            ← Volver a mis tareas
+                            {{ __('←Back to my tasks') }}
                         </x-nav-link>
                     </div>
 
@@ -22,17 +22,17 @@
 
                         {{-- Campo Título --}}
                         <div>
-                            <label for="titulo" class="block text-sm font-semibold text-gray-700 dark:text-gray-200">Título</label>
+                            <label for="titulo" class="block text-sm font-semibold text-gray-700 dark:text-gray-200">{{ __('Title')}}</label>
                             <input type="text" name="titulo" id="titulo" required
-                                   placeholder="Titulo" class="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+                                   placeholder="{{ __('Title')}} " class="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500">
                         </div>
 
                         {{-- Campo Descripción --}}
                         <div>
-                            <label for="descripcion" class="block text-sm font-semibold text-gray-700 dark:text-gray-200">Descripción</label>
+                            <label for="descripcion" class="block text-sm font-semibold text-gray-700 dark:text-gray-200">{{ __('Description')}}</label>
                             <textarea name="descripcion" id="descripcion" rows="4" 
                                 class="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500"
-                                placeholder="Detalles opcionales..."></textarea>
+                                placeholder="{{ __('Optional details')}}"></textarea>
                         </div>
 
                         {{-- Botón de envío --}}
@@ -42,7 +42,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                      stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                      d="M12 4v16m8-8H4"/></svg>
-                                Crear Tarea
+                                {{ __('Create task') }}
                             </button>
                         </div>
                     </form>

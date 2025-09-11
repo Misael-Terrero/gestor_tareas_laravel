@@ -12,10 +12,9 @@
                     <!--------------------------------------->
                     {{-- Botones de acción --}}
                     <div class="flex justify-between mb-6">
-                        <a href="{{ route('dashboard') }}"
-                            class="bg-blue-600 hover:bg-blue-700 text-lg font-bold py-2 px-4 rounded">
-                            Mis tareas
-                        </a>
+                        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                            {{ __('My tasks') }}
+                        </h2>
 
                         @if (session('success'))
                             <div role="alert" class="hidden mt-4 p-4 bg-green-600 text-lg rounded font-semibold">
@@ -25,7 +24,7 @@
 
                         <a href="{{ route('tareas.create') }}"
                             class="bg-green-600 hover:bg-green-700 text-lg font-bold py-2 px-4 rounded">
-                            Agregar tarea
+                            {{ __('Add task') }}
                         </a>
                     </div>
 
@@ -51,7 +50,7 @@
                                             {{-- Botón Editar --}}
                                             <a href="{{ route('tareas.edit', $tarea->id) }}"
                                                 class="px-3 py-1 bg-blue-500 text-sm rounded border border-blue-700 hover:bg-blue-600 transition">
-                                                Editar
+                                                {{ __('Edit') }}
                                             </a>
 
                                             {{-- Botón Eliminar --}}
@@ -61,7 +60,7 @@
                                                 @method('DELETE')
                                                 <button type="submit"
                                                     class="px-3 py-1 bg-red-500 text-sm rounded border border-red-700 hover:bg-red-600 transition">
-                                                    Eliminar
+                                                    {{ __('Delete') }}
                                                 </button>
                                             </form>
                                         </div>
