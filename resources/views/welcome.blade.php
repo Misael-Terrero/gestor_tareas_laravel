@@ -52,8 +52,8 @@
         <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
             <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
                 <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
-                    <h1 class="mb-1 font-medium">Gestor de tarea con Laravel</h1>
-                    <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">Con este sistema podras organizar todas tus tareas.<br>Una herramienta util.</p>
+                    <h1 class="mb-1 font-medium">{{ __("Task Manager with Laravel") }}</h1>
+                    <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">{{ __("With this system you can organize all your tasks.") }}<br>{{ __("A useful tool.") }}</p>
                     <ul class="flex flex-col mb-4 lg:mb-6">
                         <li class="flex items-center gap-4 py-2 relative before:border-l before:border-[#e3e3e0] dark:before:border-[#3E3E3A] before:top-1/2 before:bottom-0 before:left-[0.4rem] before:absolute">
                             <span class="relative py-1 bg-white dark:bg-[#161615]">
@@ -62,9 +62,9 @@
                                 </span>
                             </span>
                             <span>
-                                necesitas ayuda? Contact us at
+                                {{ __("do you need help? Contact us at") }}
                                 <a href="#" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
-                                    <span>Contacto</span>
+                                    <span>{{ __("Contact") }}</span>
                                     <svg
                                         width="10"
                                         height="11"
@@ -89,9 +89,9 @@
                                 </span>
                             </span>
                             <span>
-                                Mas informacion en
+                                {{ __("More information at") }}
                                 <a href="#" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
-                                    <span>Saber mas</span>
+                                    <span>{{ __("Know more") }}</span>
                                     <svg
                                         width="10"
                                         height="11"
@@ -116,7 +116,7 @@
                                 href="{{ route('login') }}"
                                 class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
                             >
-                                Log in
+                                {{ __("Log in") }}
                             </a>
                         </li>
                     </ul>
