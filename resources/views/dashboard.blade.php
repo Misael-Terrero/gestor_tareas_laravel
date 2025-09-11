@@ -32,7 +32,7 @@
                     @if ($tareas->count())
                         <ul class="space-y-4">
                             @foreach ($tareas as $tarea)
-                                <li class="border p-4 rounded-lg bg-gray-100 dark:bg-gray-700">
+                                <li class="border p-4 rounded-lg bg-gray-100 dark:bg-gray-700 my-2 mb-4">
                                     <div class="flex justify-between items-center">
                                         <div>
                                             <h3 class="text-lg font-semibold">{{ $tarea->titulo }}</h3>
@@ -46,7 +46,7 @@
                                                 {{ $tarea->descripcion }}</p>
                                         </div>
 
-                                        <div class="flex items-center space-x-2">
+                                        <div class="flex flex-row gap-3">
                                             {{-- Botón Editar --}}
                                             <a href="{{ route('tareas.edit', $tarea->id) }}"
                                                 class="px-3 py-1 bg-blue-500 text-sm rounded border border-blue-700 hover:bg-blue-600 transition">
