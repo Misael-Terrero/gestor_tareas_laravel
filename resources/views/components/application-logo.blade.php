@@ -9,16 +9,16 @@
         <rect x="30" y="25" width="50" height="10" rx="3" fill="#2CB5A0" />
 
         <!-- Checkmark -->
-        <path d="M25 56 L31 63 L42 48" stroke="#2CB5A0" stroke-width="3" fill="none" stroke-linecap="round" />
+        <path d="M25 56 L31 63 L42 48" stroke="#2CB5A0" stroke-width="4" fill="none" stroke-linecap="round" />
 
         <!-- Líneas de tareas -->
-        <line x1="45" y1="60" x2="85" y2="60" stroke="#2CB5A0" stroke-width="3"
+        <line x1="45" y1="60" x2="85" y2="60" stroke="#2CB5A0" stroke-width="4"
             stroke-linecap="round" />
-        <line x1="25" y1="70" x2="85" y2="70" stroke="#2CB5A0" stroke-width="3"
+        <line x1="25" y1="70" x2="85" y2="70" stroke="#2CB5A0" stroke-width="4"
             stroke-linecap="round" />
-        <line x1="25" y1="80" x2="85" y2="80" stroke="#2CB5A0" stroke-width="3"
+        <line x1="25" y1="80" x2="85" y2="80" stroke="#2CB5A0" stroke-width="4"
             stroke-linecap="round" />
-        <line x1="25" y1="90" x2="85" y2="90" stroke="#2CB5A0" stroke-width="3"
+        <line x1="25" y1="90" x2="85" y2="90" stroke="#2CB5A0" stroke-width="4"
             stroke-linecap="round" />
 
         <!-- Texto del nombre del proyecto -->
