@@ -2,7 +2,7 @@
     <!-- Aquí va tu SVG -->
     <svg width="60%" height="auto" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
         <!-- Fondo cuadrado teal -->
-        <rect x="0" y="0" width="110" height="120" rx="20" fill="#2CB5A0" />
+        <rect x="5" y="5" width="100" height="110" rx="15" fill="#2CB5A0" />
 
         <!-- Clipboard -->
         <rect x="15" y="30" width="80" height="80" rx="6" fill="white" />
