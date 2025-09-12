@@ -22,13 +22,13 @@
             stroke-linecap="round" />
 
         <!-- Texto del nombre del proyecto -->
-        <text x="120" y="40" font-family="Arial, sans-serif" font-size="41" fill="#e8e8e8ff" font-weight="bold">
+        <text x="120" y="42" font-family="Arial, sans-serif" font-size="41" fill="#e8e8e8ff" font-weight="bold">
             Smil
         </text>
-        <text x="120" y="73" font-family="Arial, sans-serif" font-size="32" fill="#e8e8e8ff" font-weight="bold">
+        <text x="120" y="71" font-family="Arial, sans-serif" font-size="32" fill="#e8e8e8ff" font-weight="bold">
             Project
         </text>
-        <text x="120" y="110" font-family="Arial, sans-serif" font-size="25" fill="#e7e4e4ff">
+        <text x="120" y="105" font-family="Arial, sans-serif" font-size="25" fill="#e7e4e4ff">
             task manager
         </text>
     </svg>
