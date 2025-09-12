@@ -29,7 +29,7 @@
             Project
         </text>
         <text x="120" y="110" font-family="Arial, sans-serif" font-size="25" fill="#e7e4e4ff">
-            Task Management
+            task manager
         </text>
     </svg>
 </div>
