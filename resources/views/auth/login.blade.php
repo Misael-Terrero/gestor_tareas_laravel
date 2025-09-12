@@ -40,7 +40,7 @@
                 </a>
 
                 <a href="{{ route('register') }}"
-                    class="inline-block px-5 py-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-sm text-sm leading-normal">
+                    class="inline-block px-5 py-1.5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-sm text-sm leading-normal">
                     {{ __('Register') }}
                 </a>
             @endif
