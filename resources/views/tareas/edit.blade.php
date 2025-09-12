@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 shadow sm:rounded-lg p-6">
+            <div class="bg-white dark:bg-gray-900 shadow sm:rounded-lg p-6">
                 <form action="{{ route('tareas.update', $tarea->id) }}" method="POST">
                     @csrf
                     @method('PUT')

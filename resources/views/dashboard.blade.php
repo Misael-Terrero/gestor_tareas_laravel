@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white dark:bg-gray-900 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <!--------------------------------------->
                     {{-- Botones de acción --}}
@@ -40,7 +40,7 @@
                                             <span
                                                 class="px-3 py-1 rounded-full text-sm font-medium 
                                                     {{ $tarea->completada ? 'bg-green-500' : 'bg-yellow-500' }}">
-                                                {{ $tarea->completada ? 'Completada' : 'Pendiente' }}
+                                                {{ $tarea->completada ? "Completed" : "Pending" }}
                                             </span>
                                             <p class="text-sm text-gray-600 dark:text-gray-300">
                                                 {{ $tarea->descripcion }}</p>
